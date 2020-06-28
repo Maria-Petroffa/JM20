@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/JM20/static/css/main.a1096a80.chunk.css",
+    "main.js": "/JM20/static/js/main.79d260cb.chunk.js",
+    "main.js.map": "/JM20/static/js/main.79d260cb.chunk.js.map",
+    "runtime-main.js": "/JM20/static/js/runtime-main.51ca69f5.js",
+    "runtime-main.js.map": "/JM20/static/js/runtime-main.51ca69f5.js.map",
+    "static/css/2.117ce29f.chunk.css": "/JM20/static/css/2.117ce29f.chunk.css",
+    "static/js/2.ff517f20.chunk.js": "/JM20/static/js/2.ff517f20.chunk.js",
+    "static/js/2.ff517f20.chunk.js.map": "/JM20/static/js/2.ff517f20.chunk.js.map",
+    "index.html": "/JM20/index.html",
+    "precache-manifest.f4a85432ec35b8581f20995578645277.js": "/JM20/precache-manifest.f4a85432ec35b8581f20995578645277.js",
+    "service-worker.js": "/JM20/service-worker.js",
+    "static/css/2.117ce29f.chunk.css.map": "/JM20/static/css/2.117ce29f.chunk.css.map",
+    "static/css/main.a1096a80.chunk.css.map": "/JM20/static/css/main.a1096a80.chunk.css.map",
+    "static/js/2.ff517f20.chunk.js.LICENSE.txt": "/JM20/static/js/2.ff517f20.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/JM20/static/media/OpenSans-SemiBold.e4dd2950.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51ca69f5.js",
+    "static/css/2.117ce29f.chunk.css",
+    "static/js/2.ff517f20.chunk.js",
+    "static/css/main.a1096a80.chunk.css",
+    "static/js/main.79d260cb.chunk.js"
+  ]
+}
