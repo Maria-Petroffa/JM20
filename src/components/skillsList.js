@@ -20,7 +20,7 @@ export const SkillsList = (handleChange, value, setFieldValue) => (
             </Form.Item>
           </Form.Item>
           {fields.map((field) => (
-            <Form.Item {...field} noStyle>
+            <Form.Item {...field} noStyle key={field.name}>
               <Input
                 onChange={handleChange}
                 name={`skills[${field.name + 1}]`}
@@ -31,7 +31,6 @@ export const SkillsList = (handleChange, value, setFieldValue) => (
                 className="dynamic-delete-button"
                 style={{ margin: '0 8px' }}
                 onClick={(e) => {
-                  console.log(field.name);
                   for (let i = field.name + 1; i < value.length; i += 1) {
                     setFieldValue(`skills[${i}]`, value[i + 1]);
                   }

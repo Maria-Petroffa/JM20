@@ -2,14 +2,13 @@ import React from 'react';
 
 import { Input } from 'antd';
 
-import { FormItem, Label } from '../style';
+import { FormItem, Label } from './style';
 
-export class Name extends React.Component {
+export class InputItem extends React.Component {
   render() {
     const {
-      id, labelName, onChange, value,
+      id, labelName, onChange, value, type,
     } = this.props;
-
 
     return (
       <FormItem>
@@ -18,10 +17,10 @@ export class Name extends React.Component {
           placeholder={labelName}
           id={id}
           name={id}
-          type="text"
+          type={type}
           onChange={onChange}
           value={value}
-          style={{ width: 300, height: 30 }}
+          style={{ width: '90%', height: 30 }}
         />
       </FormItem>
     );

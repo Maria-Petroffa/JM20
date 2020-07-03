@@ -32,7 +32,7 @@
     "deploy": "gh-pages -b master -d build",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/",
-    "server": "node /Projects/form/src/server.js"
+    "server": "node /Projects/form/src/server/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"

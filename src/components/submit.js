@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormItem } from '../style';
+import { FormItem } from './style';
 
 export class Submit extends React.Component {
   render() {

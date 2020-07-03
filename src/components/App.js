@@ -2,18 +2,15 @@ import React from 'react';
 
 import { useFormik } from 'formik';
 
-import axios from 'axios';
-import { Name } from './input/name';
-import { Password } from './input/password';
-import { Email } from './input/email';
-import { Website } from './input/website';
-import { Age } from './input/age';
-import { SkillsList } from './input/skillsList';
-import { AcceptTerms } from './input/acceptTerms';
-import { Submit } from './input/submit';
-
+import { InputItem } from './InputItem';
+import { Password } from './password';
+import { SkillsList } from './skillsList';
+import { AcceptTerms } from './acceptTerms';
+import { Submit } from './submit';
 import { Form, ErrorMessage } from './style';
-import { BasicFormSchema } from './validateform';
+import { BasicFormSchema } from './validateForm';
+
+import { request } from '../service/service';
 
 const SignupForm = () => {
   const formik = useFormik({
@@ -27,24 +24,19 @@ const SignupForm = () => {
       skills: [],
       acceptTerms: '',
     },
-    onSubmit: (values) => {
-      axios.post('http://localhost:5000/sign-up', values).then((response) => {
-        response.data === 'error'
-          ? alert('Этот адрес уже занят')
-          : alert('Регистрация прошла успешно');
-      });
-    },
+    onSubmit: (values) => request(values),
     validationSchema: BasicFormSchema,
   });
 
   return (
     <>
       <Form onSubmit={formik.handleSubmit}>
-        <Name
+        <InputItem
           id="name"
           labelName="Name"
           onChange={formik.handleChange}
           value={formik.values.name}
+          type="text"
         />
         {formik.touched.name && formik.errors.name ? (
           <ErrorMessage>{formik.errors.name}</ErrorMessage>
@@ -67,29 +59,32 @@ const SignupForm = () => {
         {formik.touched.repeatPassword && formik.errors.repeatPassword ? (
           <ErrorMessage>{formik.errors.repeatPassword}</ErrorMessage>
         ) : null}
-        <Email
+        <InputItem
           id="email"
           labelName="Email Address"
           onChange={formik.handleChange}
           value={formik.values.email}
+          type="email"
         />
         {formik.touched.email && formik.errors.email ? (
           <ErrorMessage>{formik.errors.email}</ErrorMessage>
         ) : null}
-        <Website
+        <InputItem
           id="website"
           labelName="Website"
           onChange={formik.handleChange}
           value={formik.values.website}
+          type="text"
         />
         {formik.touched.website && formik.errors.website ? (
           <ErrorMessage>{formik.errors.website}</ErrorMessage>
         ) : null}
-        <Age
+        <InputItem
           id="age"
           labelName="Age"
           onChange={formik.handleChange}
           value={formik.values.age}
+          type="text"
         />
         {formik.touched.age && formik.errors.age ? (
           <ErrorMessage>{formik.errors.age}</ErrorMessage>

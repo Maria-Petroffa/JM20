@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const e = require('express');
 
 const app = express();
 
@@ -32,7 +31,6 @@ const users = [];
 
 app.post('/sign-up', (req, res) => {
   const { body } = req;
-  console.log('body', body);
 
   const filtredBody = users.find((el) => el.email === body.email);
 
@@ -40,7 +38,6 @@ app.post('/sign-up', (req, res) => {
     res.send('error');
   } else {
     users.push(req.body);
-    console.log('users', users);
     res.send('success');
   }
 });

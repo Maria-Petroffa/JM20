@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { Input } from 'antd';
+import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 
-import { FormItem, Label } from '../style';
+import { FormItem, Label } from './style';
 
-export class Email extends React.Component {
+export class Password extends React.Component {
   render() {
     const {
       id, labelName, onChange, value,
@@ -13,14 +14,15 @@ export class Email extends React.Component {
     return (
       <FormItem>
         <Label htmlFor={id}>{labelName}</Label>
-        <Input
+        <Input.Password
           placeholder={labelName}
           id={id}
           name={id}
-          type="email"
+          type="text"
           onChange={onChange}
           value={value}
-          style={{ width: 300, height: 30 }}
+          style={{ width: '100%', height: 30 }}
+          iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
         />
       </FormItem>
     );

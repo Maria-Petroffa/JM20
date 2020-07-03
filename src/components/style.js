@@ -8,13 +8,13 @@ export const Form = styled.form`
 `;
 export const FormItem = styled.div`
 display: flex;
-flex-wrap: nowrap;
-justify-content: flex-end;
+flex-wrap: wrap;
 margin-top: 10px;
 `;
 export const Label = styled.label`
+width: 100%;
 margin-right: 10px;
-padding-top: 7px;
+
 font-weight: 600;
 `;
 
